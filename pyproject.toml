@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "slovak-taxonomy-for-inat"
+version = "0.1.0"
+description = "Extracting and inserting into iNaturalist various partial Slovak taxonomies"
+authors = ["Samo Sucik <7470182+samsucik@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.12.3"
+pandas = "^2.3.3"
+black = "^25.9.0"
+requests = "^2.32.5"
+pygbif = "^0.6.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
