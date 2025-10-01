@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "iNaturalist Common Name Adder",
+  "version": "1.0",
+  "description": "Adds missing Common names to iNaturalist taxa",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://www.inaturalist.org/taxa/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.inaturalist.org/taxa"],
+      "js": ["find_matching_taxa_without_common_name.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.inaturalist.org/taxa/*/taxon_names/new"],
+      "js": ["autofill_common_name_form.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://www.inaturalist.org/taxa/*"],
+      "js": ["autoclose_tab_after_adding_common_name.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "taxa.json",
+        "incorrect_synonym_matches.json",
+        "taxa_already_assigned_common_name_in_inat.json",
+        "taxa_not_in_inat.json",
+        "allowed_inat_taxon_ids.json"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
