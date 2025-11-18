@@ -10,6 +10,46 @@ function lacksCommonName(subtitleStr, taxonRankEn) {
   return subtitleStr == taxonRankMappingEnSk[taxonRankEn];
 }
 
+function extractTitleFromSearchResult(searchResultElem) {
+  // <li class="ac-result taxon ui-menu-item" role="presentation">
+  //   <div class="ac" data-taxon-id="57512">
+  //     <div class="ac-thumb">
+  //       <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/117465980/square.jpg">
+  //     </div>
+  //     <div class="ac-label">
+  //       <div>
+  //         <span class="title">Imelo Biele</span>
+  //         <span class="subtitle">
+  //           <i>Viscum album</i>
+  //         </span>
+  //       </div>
+  //     </div>
+  //     <a class="ac-view" target="_blank" rel="noopener noreferrer" href="/taxa/57512">Zobraziť</a>
+  //   </div>
+  // </li>
+  return searchResultElem.querySelector(".subtitle").innerText.trim();
+}
+
+function extractSubtitleFromSearchResult(searchResultElem) {
+  return searchResultElem
+      .querySelector(".subtitle")
+      .innerText.replace("Zobraziť", "")
+      .trim();
+}
+
+function extractCommonNameFromSearchResult(searchResultElem) {
+  const title = extractTitleFromSearchResult(searchResultElem);
+  const subtitle = extractSubtitleFromSearchResult(searchResultElem);
+  const subtitleWithoutRankName = slovakTaxonRankNames.reduce((subtitle, rankName) => subtitle.replace(rankName, "").trim(), subtitle);
+  if (!subtitleWithoutRankName.length) {
+    // the subtitle contained just a taxon rank name, implying the taxon doesn't have a common name assigned
+    return null;
+  }
+
+  // remove the parenthesised part – when present, it contains just a synonym
+  return title.replace(/\(.*\)/, '').trim();
+}
+
 const taxonRankMappingEnSk = {
   order: "Rad",
   infraorder: "Podrad",
@@ -19,6 +59,7 @@ const taxonRankMappingEnSk = {
   genus: "Rod",
   species: "Druh",
 };
+const taxonRankInatNames = ["Rad", "Podrad", "Nadčeľaď", "Čeľaď", "Podčeľaď", "Sekcia", "Rod", "Hybridný rod", "Druh", "Poddruh", "Forma", "Kríženec"];
 
 const slovakTaxonRankNames = Object.values(taxonRankMappingEnSk);
 
@@ -26,6 +67,9 @@ const SearchResultCommonNameAlreadyExists = "commonNameAlreadyExists";
 const SearchResultNoTaxaFound = "noTaxaFound";
 const SearchResultMultipleTaxaFound = "multipleTaxaFound";
 const SearchResultOneTaxonFound = "oneTaxonFound";
+
+const REPORT_EXISTING_WRONGLY_CASED_NAMES = true;
+const REPORT_EXISTING_DIFFERENT_COMMON_NAMES = true;
 
 function findMatchingDropdownTaxonElement(
   elements,
@@ -71,10 +115,7 @@ function findMatchingDropdownTaxonElement(
 
   // filter out taxa with common name already defined
   const elementsLackingCommonName = elementsMatchingIdFilter.filter((el) => {
-    const subtitleText = el
-      .querySelector(".subtitle")
-      .innerText.replace("Zobraziť", "")
-      .trim();
+    const subtitleText = extractSubtitleFromSearchResult(el)
     return !containsCommonName(subtitleText, taxonRank);
   });
   if (elementsLackingCommonName.length == 0) {
@@ -279,6 +320,10 @@ function searchResultMatchesTaxonRank(searchResultElem, taxonRank) {
   }
 }
 
+class CommonNameAlreadyExistsError extends Error {
+
+};
+
 async function commonNameAlreadyExists(
   inputBoxElem,
   commonName,
@@ -297,17 +342,28 @@ async function commonNameAlreadyExists(
   // are often not defined and when they are, the corresponding species has a common name as well.
   if (taxonRank == "genus") {
     if (resultsContainer) {
-      return (
-        Array.from(resultsContainer.querySelectorAll("li")).filter((el) => {
-          return (
-            searchResultMatchesTaxonRank(el, taxonRank) &&
-            el.innerText.toLowerCase().includes(scientificName.toLowerCase()) &&
-            el.innerText.toLowerCase().includes(commonName.toLowerCase()) &&
-            (!relevantTaxaIds ||
-              relevantTaxaIds.includes(parseInt(dropdownItemToTaxonId(el))))
-          );
-        }).length > 0
-      );
+      // try {
+        return (
+          Array.from(resultsContainer.querySelectorAll("li")).filter((el) => {
+            if (REPORT_EXISTING_WRONGLY_CASED_NAMES && searchResultMatchesTaxonRank(el, taxonRank) && el.innerText.toLowerCase().includes(commonName.toLowerCase()) && !el.innerText.includes(commonName)) {
+              const startIdx = el.innerText.toLowerCase().indexOf(commonName.toLowerCase());
+              const commonNameInInat = el.innerText.slice(startIdx, startIdx + commonName.length);
+              throw new CommonNameAlreadyExistsError(`The common name '${commonName}' seems to exist, except for being incorrectly cased ('${commonNameInInat}'). Entire search result text: ${el.innerText}`);
+            }
+
+            return (
+              searchResultMatchesTaxonRank(el, taxonRank) &&
+              el.innerText.toLowerCase().includes(scientificName.toLowerCase()) &&
+              el.innerText.toLowerCase().includes(commonName.toLowerCase()) &&
+              (!relevantTaxaIds ||
+                relevantTaxaIds.includes(parseInt(dropdownItemToTaxonId(el))))
+            );
+          }).length > 0
+        );
+      // } catch {
+
+      // }
+      
     } else {
       return false;
     }
