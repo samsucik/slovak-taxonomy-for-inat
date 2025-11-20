@@ -28,6 +28,10 @@ def main(data_source_name):
         Path("data-sources") / data_source_name / "allowed_inat_taxon_ids.csv",
         index=False,
     )
+    allowed_ids_df["id"].to_json(
+        Path("data-sources") / data_source_name / "allowed_inat_taxon_ids.json",
+        orient='values'
+    )
 
 
 if __name__ == "__main__":
