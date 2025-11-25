@@ -12,7 +12,7 @@
       "run_at": "document_idle"
     },
     {
-      "matches": ["https://www.inaturalist.org/taxa/*/taxon_names/new"],
+      "matches": ["https://www.inaturalist.org/taxa/*/taxon_names*"],
       "js": ["autofill_common_name_form.js"],
       "run_at": "document_end"
     },
