@@ -8,8 +8,22 @@ class Taxon(BaseModel):
     rank: str
     family_scientific: str | None = None
     family_common: str | None = None
+    genus_scientific: str | None = None
+    genus_common: str | None = None
+    section_scientific: str | None = None
+    section_common: str | None = None
     species_scientific: str | None = None
     species_common: str | None = None
+    hybrid_scientific: str | None = None
+    hybrid_common: str | None = None
+    subspecies_hybrid_scientific: str | None = None
+    subspecies_hybrid_common: str | None = None
+    subspecies_scientific: str | None = None
+    subspecies_common: str | None = None
+    variety_scientific: str | None = None
+    variety_common: str | None = None
+    form_scientific: str | None = None
+    form_common: str | None = None
 
 
 def extract_species(df):
@@ -33,11 +47,12 @@ def extract_species(df):
             taxon_rank = "section"
 
         if "×" in sci_name:
+            sci_name = re.sub(r"×(\w)", r"× \g<1>", sci_name)
             taxon_rank = "hybrid" # TODO check all rank names
 
         if "nothosubsp." in sci_name:
             sci_name = re.sub(r"\s*nothosubsp\.\s*", " ", sci_name)
-            taxon_rank = "subspecies hybrid"
+            taxon_rank = "subspecies_hybrid"
         
         if "subsp." in sci_name:
             sci_name = re.sub(r"\s*subsp\.\s*", " ", sci_name)
@@ -66,14 +81,14 @@ def extract_species(df):
             print(f"Slovak name contains alternative name(s): '{sk_name}'. Removing it: '{sk_name_edited}'")
             sk_name = sk_name_edited
 
-        taxa.append(
-            Taxon(
-                rank=taxon_rank,
-                family_scientific=row[sci_name_family_col].strip() if pd.notna(row[sci_name_family_col]) else None,
-                species_scientific=sci_name,
-                species_common=sk_name,
-            )
-        )
+        taxon_attrs = {
+            "rank": taxon_rank,
+            "family_scientific": row[sci_name_family_col].strip() if pd.notna(row[sci_name_family_col]) else None,
+            f"{taxon_rank}_scientific": sci_name,
+            f"{taxon_rank}_common": sk_name,
+        }
+
+        taxa.append(Taxon(**taxon_attrs))
 
     return taxa
 
