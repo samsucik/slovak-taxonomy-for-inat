@@ -16,7 +16,9 @@ function createNote(scientificName) {
 }
 
 const scientificNamesMatch = (searchedName, iNatName) => {
+  return true;
   if (searchedName.toLowerCase() == iNatName.toLowerCase()) return true;
+  if (iNatName.includes(" f.") && iNatName.replace(/ f.\s*/, " ").toLowerCase() == searchedName.toLowerCase()) return true;
   if (iNatName.includes(" var.") && iNatName.replace(/ var.\s*/, " ").toLowerCase() == searchedName.toLowerCase()) return true;
   if (iNatName.includes(" ssp.") && iNatName.replace(/ ssp.\s*/, " ").toLowerCase() == searchedName.toLowerCase()) return true;
   return false;
