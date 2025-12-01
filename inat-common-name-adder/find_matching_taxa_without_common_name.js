@@ -24,14 +24,17 @@ function extractSubtitleFromSearchResult(searchResultElem) {
 function extractCommonNameFromSearchResult(searchResultElem) {
   const title = extractTitleFromSearchResult(searchResultElem);
   const subtitle = extractSubtitleFromSearchResult(searchResultElem);
-  const subtitleWithoutRankName = taxonRankInatNames.reduce((subtitle, rankName) => subtitle.replace(rankName, "").trim(), subtitle);
+  const subtitleWithoutRankName = taxonRankInatNames.reduce(
+    (subtitle, rankName) => subtitle.replace(rankName, "").trim(),
+    subtitle
+  );
   if (!subtitleWithoutRankName.length) {
     // the subtitle contained just a taxon rank name, implying the taxon doesn't have a common name assigned
     return null;
   }
 
   // remove the parenthesised part – when present, it contains just a synonym
-  return title.replace(/\(.*\)/, '').trim();
+  return title.replace(/\(.*\)/, "").trim();
 }
 
 const removeTaxonRankPrefix = (text) => {
@@ -41,15 +44,20 @@ const removeTaxonRankPrefix = (text) => {
     }
   }
   return text;
-}
+};
 
 const removeWhiteSpaceAndSpecialChars = (text) => {
   return text.replace(/[\.\s×]/g, "");
-}
+};
 
-const searchResultExactlyMatchesScientificName = (searchResultElem, scientificName, ignoreWhiteSpaceAndSpecialChars = false) => {
+const searchResultExactlyMatchesScientificName = (
+  searchResultElem,
+  scientificName,
+  ignoreWhiteSpaceAndSpecialChars = false
+) => {
   var title = extractTitleFromSearchResult(searchResultElem).toLowerCase();
-  var subtitle = extractSubtitleFromSearchResult(searchResultElem).toLowerCase();
+  var subtitle =
+    extractSubtitleFromSearchResult(searchResultElem).toLowerCase();
   var scientificNameProcessed = scientificName;
   if (ignoreWhiteSpaceAndSpecialChars) {
     title = removeWhiteSpaceAndSpecialChars(title);
@@ -60,23 +68,26 @@ const searchResultExactlyMatchesScientificName = (searchResultElem, scientificNa
     title == scientificNameProcessed.toLowerCase() ||
     title.includes(`(${scientificNameProcessed.toLowerCase()})`) ||
     subtitle == scientificNameProcessed.toLowerCase() ||
-    removeTaxonRankPrefix(subtitle).trim() == scientificNameProcessed.toLowerCase()
+    removeTaxonRankPrefix(subtitle).trim() ==
+      scientificNameProcessed.toLowerCase()
   );
-}
+};
 
 const extractRankFromSearchResult = (searchResultElem, expectedRank) => {
   const subtitle = extractSubtitleFromSearchResult(searchResultElem);
-  const foundRanks = taxonRankInatNames.filter((rank) => subtitle.startsWith(rank));
+  const foundRanks = taxonRankInatNames.filter((rank) =>
+    subtitle.startsWith(rank)
+  );
   if (!foundRanks.length) {
     // the rank could be species, subspecies, hybrid, form, ... for species we know the rank isn't part of the subtitle
     // if (expectedRank != "species") {
     //   console.log(`This subtitle doesn't seem to start with a rank: ${subtitle}. Expected rank: ${expectedRank} (${taxonRankMappingEnSk[expectedRank]})`)
     // }
-    return null
+    return null;
   } else {
     return taxonRankMappingSkEn[foundRanks[0]];
   }
-}
+};
 
 const taxonRankMappingEnSk = {
   superorder: "Nadrad",
@@ -101,14 +112,13 @@ const taxonRankMappingEnSk = {
   form: "Forma",
   hybrid: "Kríženec",
   infrahybrid: "Infrahybrid",
-  variety: "Varieta"
+  variety: "Varieta",
 };
 const taxonRankInatNames = Object.values(taxonRankMappingEnSk);
 
 const taxonRankMappingSkEn = Object.fromEntries(
-  Object.entries(taxonRankMappingEnSk).map(entry => entry.reverse())
+  Object.entries(taxonRankMappingEnSk).map((entry) => entry.reverse())
 );
-
 
 const SearchResultCommonNameAlreadyExists = "commonNameAlreadyExists";
 const SearchResultNoTaxaFound = "noTaxaFound";
@@ -125,11 +135,16 @@ const filterByAllowedTaxonIds = (searchResultElements, allowedTaxaIdsList) => {
   } else {
     return searchResultElements;
   }
-}
+};
 
 const stringifyListOfSearchResultElems = (elems) => {
-  return elems.map(el => (extractTitleFromSearchResult(el) + " | " + extractSubtitleFromSearchResult(el)));
-}
+  return elems.map(
+    (el) =>
+      extractTitleFromSearchResult(el) +
+      " | " +
+      extractSubtitleFromSearchResult(el)
+  );
+};
 
 function findMatchingDropdownTaxonElement(
   elements,
@@ -152,12 +167,20 @@ function findMatchingDropdownTaxonElement(
     return searchResultExactlyMatchesScientificName(el, scientificName);
   });
   if (!elementsFilteredBySciName.length) {
-    const looselyFilteredElements = stringifyListOfSearchResultElems(filteredElements.filter((el) => {
-      return searchResultExactlyMatchesScientificName(el, scientificName, true);
-    }));
-    
+    const looselyFilteredElements = stringifyListOfSearchResultElems(
+      filteredElements.filter((el) => {
+        return searchResultExactlyMatchesScientificName(
+          el,
+          scientificName,
+          true
+        );
+      })
+    );
+
     console.log(
-      `Nothing found for '${scientificName}' (${taxonRank}) (filtering based on scientific name). ${looselyFilteredElements.length ? looselyFilteredElements : ''}`
+      `Nothing found for '${scientificName}' (${taxonRank}) (filtering based on scientific name). ${
+        looselyFilteredElements.length ? looselyFilteredElements : ""
+      }`
     );
     return { result: SearchResultNoTaxaFound, elems: looselyFilteredElements };
   } else {
@@ -165,14 +188,19 @@ function findMatchingDropdownTaxonElement(
   }
 
   // match taxon rank
-  const elementsFilteredByTaxonRank = filteredElements.filter(
-    (el) => searchResultMatchesTaxonRank(el, taxonRank)
+  const elementsFilteredByTaxonRank = filteredElements.filter((el) =>
+    searchResultMatchesTaxonRank(el, taxonRank)
   );
   if (!elementsFilteredByTaxonRank.length) {
     console.log(
-      `Scientific name matches but taxon rank doesn't for these search results for ${scientificName} (${taxonRank}): ${stringifyListOfSearchResultElems(filteredElements)}`
+      `Scientific name matches but taxon rank doesn't for these search results for ${scientificName} (${taxonRank}): ${stringifyListOfSearchResultElems(
+        filteredElements
+      )}`
     );
-    return { result: SearchResultNoTaxaFound, elems: stringifyListOfSearchResultElems(filteredElements) };
+    return {
+      result: SearchResultNoTaxaFound,
+      elems: stringifyListOfSearchResultElems(filteredElements),
+    };
   } else {
     filteredElements = elementsFilteredByTaxonRank;
   }
@@ -180,8 +208,14 @@ function findMatchingDropdownTaxonElement(
   // filter out taxa with common name already defined
   filteredElements = filteredElements.filter((el) => {
     const iNatCommonName = extractCommonNameFromSearchResult(el);
-    if (REPORT_EXISTING_DIFFERENT_COMMON_NAMES && iNatCommonName && iNatCommonName.toLowerCase() != commonName.toLowerCase()) {
-      console.warn(`A common name exists for ${scientificName} and differs from the provided common name: iNat '${iNatCommonName}' vs provided '${commonName}'.`);
+    if (
+      REPORT_EXISTING_DIFFERENT_COMMON_NAMES &&
+      iNatCommonName &&
+      iNatCommonName.toLowerCase() != commonName.toLowerCase()
+    ) {
+      console.warn(
+        `A common name exists for ${scientificName} and differs from the provided common name: iNat '${iNatCommonName}' vs provided '${commonName}'.`
+      );
     }
     return iNatCommonName == null;
   });
@@ -359,20 +393,41 @@ async function providedCommonNameAlreadyExists(
     return false;
   }
 
-  const matchingSearchResults = Array.from(resultsContainer.querySelectorAll("li")).filter((el) => {
-    if (relevantTaxaIds && !relevantTaxaIds.includes(parseInt(dropdownItemToTaxonId(el)))) {
+  const matchingSearchResults = Array.from(
+    resultsContainer.querySelectorAll("li")
+  ).filter((el) => {
+    if (
+      relevantTaxaIds &&
+      !relevantTaxaIds.includes(parseInt(dropdownItemToTaxonId(el)))
+    ) {
       return false;
     }
 
     const iNatCommonName = extractCommonNameFromSearchResult(el);
     const iNatRank = extractRankFromSearchResult(el, taxonRank);
     if (iNatCommonName == null) return false;
-    const ranksMatch = iNatRank == null ? taxonRank == "species" : taxonRank == iNatRank; // for species we expect null iNat rank
+    const ranksMatch =
+      iNatRank == null ? taxonRank == "species" : taxonRank == iNatRank; // for species we expect null iNat rank
     if (iNatCommonName.toLowerCase() == commonName.toLowerCase()) {
-      console.log(`The common name for ${scientificName} already exists. ${ranksMatch ? 'Ranks match.' : `Ranks don't match: ${taxonRank} vs ${iNatRank}`}`);
+      console.log(
+        `The common name for ${scientificName} already exists. ${
+          ranksMatch
+            ? "Ranks match."
+            : `Ranks don't match: ${taxonRank} vs ${iNatRank}`
+        }`
+      );
       if (!iNatRank || iNatRank == taxonRank) return true;
-    } else if (removeDiacritics(iNatCommonName.toLowerCase()) == removeDiacritics(commonName.toLowerCase())) {
-      console.warn(`The common name for ${scientificName} already exists but differs in terms of diacritics: ${commonName} vs ${iNatCommonName}. ${ranksMatch ? 'Ranks match.' : `Ranks don't match: ${taxonRank} vs ${iNatRank}`}`);
+    } else if (
+      removeDiacritics(iNatCommonName.toLowerCase()) ==
+      removeDiacritics(commonName.toLowerCase())
+    ) {
+      console.warn(
+        `The common name for ${scientificName} already exists but differs in terms of diacritics: ${commonName} vs ${iNatCommonName}. ${
+          ranksMatch
+            ? "Ranks match."
+            : `Ranks don't match: ${taxonRank} vs ${iNatRank}`
+        }`
+      );
       if (!iNatRank || iNatRank == taxonRank) return true;
     }
 
@@ -446,7 +501,9 @@ async function findTaxaWithoutCommonName() {
     const commonName = getCommonName(taxon);
     if (!originalScientificName) {
       console.warn(
-        `No scientific name provided for this taxon (${JSON.stringify(taxon)}), skipping it.`
+        `No scientific name provided for this taxon (${JSON.stringify(
+          taxon
+        )}), skipping it.`
       );
       continue;
     }
@@ -479,7 +536,8 @@ async function findTaxaWithoutCommonName() {
         taxon.rank,
         allowedIdsList
       )
-    ) continue;
+    )
+      continue;
 
     var scientificNameCandidates =
       taxon["synonyms"] != undefined
@@ -520,9 +578,13 @@ async function findTaxaWithoutCommonName() {
         allowedIdsList
       );
       if (filteredSearchResults["result"] == SearchResultNoTaxaFound) {
-        closeSearchResults = closeSearchResults.concat(filteredSearchResults["elems"]);
+        closeSearchResults = closeSearchResults.concat(
+          filteredSearchResults["elems"]
+        );
         continue;
-      } else if (filteredSearchResults["result"] == SearchResultMultipleTaxaFound) {
+      } else if (
+        filteredSearchResults["result"] == SearchResultMultipleTaxaFound
+      ) {
         continue;
       } else if (
         filteredSearchResults["result"] == SearchResultCommonNameAlreadyExists
@@ -537,7 +599,7 @@ async function findTaxaWithoutCommonName() {
         continue;
       }
 
-      await sleep(500);
+      await sleep(3000);
 
       // save common name so another script can pick it up and use on the common-name-adding page
       localStorage.setItem(
@@ -560,7 +622,13 @@ async function findTaxaWithoutCommonName() {
       continue;
     } else {
       console.warn(
-        `We couldn't find a matching taxon for ${originalScientificName} (${taxon.rank}), skipping it.${closeSearchResults.length ? ` The closest search results were: ${closeSearchResults}` : ''}`
+        `We couldn't find a matching taxon for ${originalScientificName} (${
+          taxon.rank
+        }), skipping it.${
+          closeSearchResults.length
+            ? ` The closest search results were: ${closeSearchResults}`
+            : ""
+        }`
       );
     }
   }
