@@ -29,6 +29,16 @@ class Taxon(BaseModel):
     form_scientific: str | None = None
     form_common: str | None = None
 
+    scientific_synonyms_sbm: list[str] = []
+    slovak_synonyms_sbm: list[str] = []
+    is_taxon_questionable: bool = False
+
+    def add_slovak_synonym(self, syn):
+        self.slovak_synonyms_sbm.append(syn)
+
+    def add_scientific_synonym(self, syn):
+        self.scientific_synonyms_sbm.append(syn)
+
 
 def is_legit_inat_rank(rank):
     return rank in {
@@ -74,9 +84,21 @@ def extract_species(df):
     sci_name_family_col = "vedecké meno čeľade"
     sci_name_col = "vedecké meno taxónu"
     sk_name_col = "platné slovenské meno taxónu"
+    name_type_col = "Taxonomický status"
 
+    current_genus_sk_name = None
     taxa = []
     for _, row in df.iterrows():
+
+        if pd.notna(row[name_type_col]) and "s" in row[name_type_col].lower():
+            if pd.notna(row[sci_name_col]):
+                taxa[-1].add_scientific_synonym(row[sci_name_col])
+            if pd.notna(row[sk_name_col]) and row[sk_name_col].strip() != "–":
+                taxa[-1].add_slovak_synonym(row[sk_name_col])
+            continue
+        elif pd.notna(row[name_type_col]) and row[name_type_col].lower() == "d?" and pd.notna(row[sk_name_col]) and row[sk_name_col].strip() != "–":
+            print(f"---> UNCERTAIN TAXON {row[sk_name_col]} ({row[sci_name_col]})")
+
         if (
             pd.isna(row[sci_name_col])
             or pd.isna(row[sk_name_col])
@@ -132,13 +154,32 @@ def extract_species(df):
         # remove alternative names (anything in parentheses)
         if "(" in sk_name:
             sk_name_edited = re.sub(r"[ ]?\([^(]+\)[ ]?", " ", sk_name).strip()
-            print(
-                f"Slovak name contains alternative name(s): '{sk_name}'. Removing it: '{sk_name_edited}'"
-            )
             sk_name = sk_name_edited
 
         if not is_legit_inat_rank(taxon_rank):
-            print("\n\nTHE RANK ISN'T VALID: ", taxon_rank, "\n\n")
+            pass
+            # print("\nTHE RANK ISN'T VALID: ", taxon_rank, "\n")
+
+        if taxon_rank == "genus":
+            current_genus_sk_name = sk_name
+        elif taxon_rank not in ["section", "group"]:
+            is_genus_name_found_in_sk_name = True
+
+            if len(current_genus_sk_name.split(",")) > 1:
+                if not any(
+                    [
+                        part.strip() in sk_name
+                        for part in current_genus_sk_name.split(",")
+                    ]
+                ):
+                    is_genus_name_found_in_sk_name = False
+            elif current_genus_sk_name not in sk_name:
+                is_genus_name_found_in_sk_name = False
+
+            if not is_genus_name_found_in_sk_name:
+                print(
+                    f"Possible typo alert: The genus name isn't contained in the species name: {current_genus_sk_name} vs {sk_name}."
+                )
 
         taxon_attrs = {
             "rank": taxon_rank,
@@ -149,6 +190,7 @@ def extract_species(df):
             ),
             f"{taxon_rank}_scientific": sci_name,
             f"{taxon_rank}_common": sk_name,
+            "is_taxon_questionable": pd.notna(row[name_type_col]) and "?" in row[name_type_col]
         }
 
         taxa.append(Taxon(**taxon_attrs))

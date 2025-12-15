@@ -2,32 +2,22 @@
 sciName,commonNameSBM,commonNameINat,differenceCategory
 Circaeasteraceae,čarovnicovité,Čarovkovité,proper
 Abies balsamea,jedľa balzamová,Jedla Balzamová,diacritics
-Acer saccharum,javor cukrodarný,Acer saccharum,proper
 Achillea filipendulina,rebríček túžobníkovitý,Rebríček Túžobníkový,proper
 Achillea ptarmica,rebríček bertramový,Rebríček Bertrámový,diacritics
-Aconitum napellus,prilbica modrá,Prilbica Tuhá,proper
 Actaea,"samorastlík, ploštičník",Samorastlík,proper
 Aegopodium podagraria,kozia noha hostcová,Kozonoha Hostcová,proper
 Agropyron cristatum,žitniak hrebenatý,Žitniak Hrebenitý,proper
 Alchemilla subconnivens,alchemilka jemnozubá,Alchemilka Uzavretá,proper
 Alchemilla taurica,alchemilka krymská,Alchemilka Vejárovitá,proper
-Allium amethystinum,cesnak ametystový,Allium amethystinum,proper
-Allium ampeloprasum,pór divý,Allium ampeloprasum,proper
 Allium carinatum,cesnak kýlnatý,Cesnak Člnkovitý,proper
 Allium porrum,pór pestovaný,Pór Záhradný,proper
 Allium schoenoprasum,pažítka jedlá,Cesnak Pažítkový,proper
-Allium scorodoprasum,cesnak pórolistý,Allium scorodoprasum,proper
 Allium scorodoprasum,cesnak pórolistý,Cesnak Orešcový,proper
 Allium,"cesnak, cibuľa, pažítka, pór",Cesnak,proper
-Aloe perfoliata,aloa sutinová,Aloe perfoliata,proper
 Althaea narbonensis,ibiš narbonský,Ibiš Konopný,proper
-Amaranthus hybridus,láskavec hybridný,Amaranthus hybridus,proper
 Amaranthus patulus,láskavec rozložitý,Láskavec Hybridný,proper
 Amaranthus retroflexus,láskavec srstnatý,Láskavec Ohnutý,proper
 Amaranthus vulgatissimus,láskavec najobyčajnejší,Láskavec Standleyho,proper
-Amelanchier canadensis,muchovník kanadský,Amelanchier canadensis,proper
-Amelanchier sanguinea,muchovník krvavý,Amelanchier sanguinea,proper
-Amelanchier spicata,muchovník klasnatý,Amelanchier spicata,proper
 Anacamptis morio,červenohlav obyčajný,Vstavač Obyčajný,proper
 Anacamptis palustris,červenohlav močiarny,Vstavač Močiarny,proper
 Androcymbium melanthioides,jesienka kýchavicovitá,Jesienka Kýchavičníkovitá,proper
@@ -78,7 +68,7 @@ Catalpa fargesii,katalpa Fargesova,Katalpa Bungeho,proper
 Catalpa speciosa,katalpa nádherná,Katalpa Úhľadná,proper
 Cedrus atlantica,céder atlaský,Céder Atlantský,proper
 Cenchrus purpurascens,ostroklas purpurový,Ostroklas Psiarkovitý,proper
-Centaurea phrygia,nevädza frygická,Nevädzovec Frygický,proper
+Centaurea phrygia,nevädza frýgická,Nevädzovec Frygický,proper
 Centaurea stoebe,nevädza porýnska,Nevädzka Porýnska,proper
 Centaurium erythraea,zemežlč lekárska,Zemežlč Menšia,proper
 Cephalanthera longifolia,vtáčia prilba dlholistá,Prilbovka Dlholistá,proper
@@ -248,7 +238,6 @@ Physalis alkekengi,machovka židovská čerešňa,Machovka Čerešňová,proper
 Physalis franchetii,machovka Franchettova,Machovka Čerešňová,proper
 Picea omorika,smrek balkánsky,Smrek Omorikový,proper
 Picris hieracioides,horčík jastrabníkovitý,Horčík Jastrabníkolistý,proper
-Pieris,pieris,Mlynárik,proper
 Pinus cembra,borovica vrchovská,Borovica Limbová,proper
 Pinus edulis,borovica jedlá,Borovica Sladká,proper
 Pistacia terebinthus,pistácia terpentínová,Pistácia Terebintová,proper
@@ -303,7 +292,6 @@ Rubus caesius,ostružina sivobelasá,Ostružina Ožinová,proper
 Rubus idaeus,malina obyčajná,Ostružina Malinová,proper
 Rubus phoenicolasius,ostružina purpurovočervená,Japonský Černica,proper
 Rubus ulmifolius,ostružina brestolistá,Ostružina,proper
-Rubus,"ostružina, malina, černica",Ostružina,proper
 Rudbeckia laciniata,rudbekia úkrojkatá,Rudbekia Strapatá,proper
 Rumex acetosa,štiav kyslý,Štiav Lúčny,proper
 Rumex alpinus,štiav alpský,Štiavec Alpský,proper
@@ -326,9 +314,7 @@ Sclerocactus erectocentrus,sklerokaktus vzpriamený,Echinomastus Vzpriamený,pro
 Sclerocactus mariposensis,sklerokaktus mariposký,Echinomastus Mariposký,proper
 Scorzonera austriaca,hadí mor rakúsky,Hadomor Rakúsky,proper
 Scorzonera,hadí mor,Hadí Koreň,proper
-Sedum hybridum,rozchodník hybridný,Aizopsis Hybridný,proper
 Sedum kamtschaticum,rozchodník kamčatský,Rozchodník Kvetonosný,proper
-Sedum middendorfianum,rozchodník Middendorfov,Rozchodník Hybridný,proper
 Sedum reflexum,rozchodník zohnutý,Rozchodník Skalný,proper
 Sedum sarmentosum,rozchodník poplazový,Rozchodník Plazivý,proper
 Sedum urvillei,rozchodník balkánsky,Rozchodník Hillebrandov,proper

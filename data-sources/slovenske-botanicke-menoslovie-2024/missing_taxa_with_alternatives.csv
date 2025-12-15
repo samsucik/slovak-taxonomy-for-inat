@@ -1,19 +1,60 @@
 rank,sciName,matches
-form,Betula pendula carelica,"[('Betula pendula carelica', 'Poddruh')]"
-form,Blitum bonus-henricus dentatum,"[('Mrlík Dobrý (Blitum bonus-henricus dentatum)', 'Blitum bonus-henricus')]"
-genus,Allanblackia,"[('Allanblackia', 'Sekcia')]"
+
+strange cases
+group,Citrullus lanatus Citroides,"[('Citrullus amarus (Citrullus lanatus citroides)', 'Druh')]",v iNat ide o samostatny druh (Citrullus amarus) a nie o skupinu kultivarov. nazveme to stale "citrónová dyňa"?
+group,Triticum aestivum Compactum,"[('Triticum compactum (Triticum aestivum compactum)', 'Druh')]",je trochu zvlastne aby sme pre druh pouzili meno skupiny kultivarov...
+hybrid,Citrus × sinensis,"[('Citrónovník Horký (Citrus × sinensis)', 'Citrus × aurantium')]",v iNat zluceny s Citrus ×aurantium s ktorym podla SBM zdiela tu istu hybridnu formulu...
+hybrid,Iris × sambucina,"[('Kosatec Nemecký (Iris × sambucina)', 'Iris × germanica')]",v iNat zluceny s Iris × germanica a uvadza sa ta ista hybridna formula ako v SBM pre Iris × sambucina...
+
+neexistujuci taxon kvoli zluceniu prip. neoddeleniu od rodicovskeho taxonu
+genus,Parakeelya,"[('Calandrinia balonensis (Parakeelya)', 'Druh'), ('Calandrinia polyandra (Parakeelya)', 'Druh')]",v iNat je zjavne rod Parakeelya zluceny do rodu Calandrinia ktory v SBM existuje samostatne
+form,Blitum bonus-henricus dentatum,"[('Mrlík Dobrý (Blitum bonus-henricus dentatum)', 'Blitum bonus-henricus')]",pre nieco je v iNat zluceny s B. bonus-henricus
+subspecies,Cichorium intybus foliosum,"[('Čakanka Obyčajná Pravá (Cichorium intybus foliosum)', 'Cichorium intybus intybus')]",pre nieco je v iNat zluceny s Cichorium intybus intybus
+group,Cichorium intybus Radicosum,"[('Čakanka Obyčajná Pravá (Cichorium intybus radicosum)', 'Cichorium intybus intybus')]",pre nieco je v iNat zluceny s Cichorium intybus intybus
+group,Citrullus lanatus Lanatus,"[('Dyňa Červená (Citrullus lanatus lanatus)', 'Citrullus lanatus')]",v iNat je zluceny s Citrullus lanatus
+group,Lactuca sativa Longifolia,"[('Šalát Siaty (Lactuca sativa longifolia)', 'Lactuca sativa')]",v iNat je zluceny s Lactuca sativa
+group,Oryza sativa Japonica,"[('Ryža Siata (Oryza sativa japonica)', 'Oryza sativa')]",v iNat zluceny s Oryza sativa
+group,Raphanus sativus Longipinnatus,"[('Raphanus raphanistrum sativus (Raphanus sativus longipinnatus)', 'Poddruh')]",v iNat zlucena s Raphanus raphanistrum sativus
+group,Raphanus sativus Radicula,"[('Raphanus raphanistrum sativus (Raphanus sativus radicula)', 'Poddruh')]",v iNat zlucena s Raphanus raphanistrum sativus
+group,Raphanus sativus Sativus,"[('Raphanus raphanistrum sativus (Raphanus sativus sativus)', 'Poddruh')]",v iNat zlucena s Raphanus raphanistrum sativus
+hybrid,Abutilon × hybridum,"[('Podslnečník (Abutilon × Hybridum)', 'Rod Abutilon')]",v iNat je zluceny s Abutilon
+hybrid,Epidendrum × elongatum,"[('Epidendrum Jednostranné (Epidendrum elongatum)', 'Epidendrum secundum')]",v iNat zluceny s Epidendrum secundum (jeden z rodicov)
+hybrid,Populus × candicans,"[('Topoľ Balzamový (Populus candicans)', 'Populus balsamifera')]",ako aj SBM uvadza je to podla POWO synonymum pre Populus balsamifera
+
+neexistujuci taxon
+group,Cichorium intybus Foliosum,"[('Čakanka Obyčajná Pravá (Cichorium intybus foliosum)', 'Cichorium intybus intybus')]",existuje iba poddruh ktory je ale v SBM oddeleny od skupiny kultivarov
+hybrid,Phlox × procumbens,"[('Phlox procumbens', 'Druh')]",podla POWO je Phlox procumbens odlisny od Phlox × procumbens
+
+
+prijmeme ze je to (pod)sekcia a prisposobime SK meno?
 genus,Anagallis,"[('Anagallis', 'Sekcia')]"
 genus,Aphanes,"[('Aphanes', 'Sekcia')]"
-genus,Consolida,"[('Ostrôžka', 'Podrod Consolida')]"
 genus,Cortusa,"[('Cortusa', 'Podsekcia')]"
 genus,Dorycnium,"[('Dorycnium', 'Sekcia')]"
-genus,Galeobdolon,"[('Galeobdolon', 'Podrod')]"
 genus,Glaux,"[('Glaux', 'Sekcia')]"
 genus,Jovibarba,"[('Skalničník', 'Sekcia Jovibarba')]"
-genus,Parakeelya,"[('Calandrinia balonensis (Parakeelya)', 'Druh'), ('Calandrinia polyandra (Parakeelya)', 'Druh')]"
 genus,Spartina,"[('Spartina', 'Sekcia')]"
 genus,Trientalis,"[('Trientalis', 'Sekcia')]"
 genus,Vaccaria,"[('Vaccaria', 'Sekcia')]"
+
+nenajdene
+hybrid,Amelanchier × grandiflora,"[('Muchovník Lamarckov (Amelanchier × grandiflora)', 'Amelanchier × lamarckii')]",v iNat zluceny s Amelanchier ×Lamarckii ale hybridna formula sa lisi
+hybrid,Hosta × fortunei,"[('Hosta sieboldiana sieboldiana (Hosta fortunei)', 'Varieta')]",v iNat zluceny s Hosta sieboldiana sieboldiana
+
+nespravne/zastarane meno pridane inym pouzivatelom
+hybrid,Asplenium × alternifolium,"[('Slezinník Nemecký', 'Asplenium × alternifolium')]"
+hybrid,Equisetum × meridionale,"[('Prasličkovka Južná', 'Equisetum × meridionale')]"
+hybrid,Equisetum × moorei,"[('Prasličkovka Mooreova', 'Equisetum × moorei')]"
+hybrid,Fagus × taurica,"[('Buk Taurský', 'Fagus × taurica')]"
+hybrid,Fragaria × ananassa,"[('Jahoda Ananásová', 'Fragaria × ananassa')]"
+hybrid,Pelargonium × hybridum,"[('Muškát Záhradný', 'Pelargonium × hybridum')]"
+hybrid,Reynoutria × bohemica,"[('Pohánkovec Český', 'Reynoutria × bohemica')]"
+
+OK matches
+form,Betula pendula carelica,"[('Betula pendula carelica', 'Poddruh')]"
+genus,Allanblackia,"[('Allanblackia', 'Sekcia')]"
+genus,Consolida,"[('Ostrôžka', 'Podrod Consolida')]"
+genus,Galeobdolon,"[('Galeobdolon', 'Podrod')]"
 genushybrid,Comagaria rosea,"[('× Comagaria rosea', 'Kríženec')]"
 genushybrid,Comagaria,"[('× Comagaria', 'Hybridný rod')]"
 genushybrid,Epicattleya,"[('× Epicattleya', 'Hybridný rod')]"
@@ -32,62 +73,34 @@ group,Apium graveolens Secalinum,"[('Apium graveolens secalinum', 'Varieta')]"
 group,Beta vulgaris Cicla,"[('Beta vulgaris cicla', 'Varieta')]"
 group,Brassica rapa Pekinensis,"[('Brassica rapa pekinensis', 'Poddruh')]"
 group,Brassica rapa Perviridis,"[('Brassica rapa perviridis', 'Varieta')]"
-group,Cichorium intybus Foliosum,"[('Čakanka Obyčajná Pravá (Cichorium intybus foliosum)', 'Cichorium intybus intybus')]"
-group,Cichorium intybus Radicosum,"[('Čakanka Obyčajná Pravá (Cichorium intybus radicosum)', 'Cichorium intybus intybus')]"
-group,Citrullus lanatus Citroides,"[('Citrullus amarus (Citrullus lanatus citroides)', 'Druh')]"
-group,Citrullus lanatus Lanatus,"[('Dyňa Červená (Citrullus lanatus lanatus)', 'Citrullus lanatus')]"
 group,Foeniculum vulgare Azoricum,"[('Foeniculum vulgare azoricum', 'Varieta')]"
 group,Foeniculum vulgare Dulce,"[('Foeniculum vulgare dulce', 'Varieta')]"
 group,Foeniculum vulgare Vulgare,"[('Foeniculum vulgare vulgare', 'Varieta')]"
 group,Hordeum vulgare Distichon,"[('Hordeum vulgare distichon', 'Poddruh')]"
-group,Lactuca sativa Longifolia,"[('Šalát Siaty (Lactuca sativa longifolia)', 'Lactuca sativa')]"
-group,Oryza sativa Japonica,"[('Ryža Siata (Oryza sativa japonica)', 'Oryza sativa')]"
 group,Petroselinum crispum Crispum,"[('Petroselinum crispum crispum', 'Poddruh')]"
-group,Raphanus sativus Longipinnatus,"[('Raphanus raphanistrum sativus (Raphanus sativus longipinnatus)', 'Poddruh')]"
-group,Raphanus sativus Radicula,"[('Raphanus raphanistrum sativus (Raphanus sativus radicula)', 'Poddruh')]"
-group,Raphanus sativus Sativus,"[('Raphanus raphanistrum sativus (Raphanus sativus sativus)', 'Poddruh')]"
 group,Triticum aestivum Aestivum,"[('Triticum aestivum aestivum', 'Poddruh')]"
-group,Triticum aestivum Compactum,"[('Triticum compactum (Triticum aestivum compactum)', 'Druh')]"
 group,Triticum aestivum Macha,"[('Triticum aestivum macha', 'Poddruh')]"
 group,Triticum aestivum Spelta,"[('Triticum aestivum spelta', 'Poddruh')]"
 group,Triticum turgidum Durum,"[('Triticum turgidum durum', 'Poddruh')]"
 group,Triticum turgidum Polonicum,"[('Triticum turgidum polonicum', 'Poddruh')]"
 hybrid,× Aliceara,"[('× Aliceara', 'Hybridný rod')]"
-hybrid,Abutilon × hybridum,"[('Podslnečník (Abutilon × Hybridum)', 'Rod Abutilon')]"
 hybrid,Allium × proliferum,"[('Allium proliferum (Allium × proliferum)', 'Druh')]"
-hybrid,Amelanchier × grandiflora,"[('Muchovník Lamarckov (Amelanchier × grandiflora)', 'Amelanchier × lamarckii')]"
-hybrid,Asplenium × alternifolium,"[('Slezinník Nemecký', 'Asplenium × alternifolium')]"
 hybrid,Berberis × media,"[('Berberis media', 'Druh')]"
-hybrid,Broussonetia × kazinoki,"[('Broussonetia kazinoki', 'Druh')]"
 hybrid,Centaurea × melanocalathia,"[('Centaurea phrygia melanocalathia (Centaurea melanocalathia)', 'Poddruh')]"
 hybrid,Citrus × paradisi,"[('Citrus × aurantium aurantium (Citrus × paradisi)', 'Forma')]"
-hybrid,Citrus × sinensis,"[('Citrónovník Horký (Citrus × sinensis)', 'Citrus × aurantium')]"
-hybrid,Epidendrum × elongatum,"[('Epidendrum Jednostranné (Epidendrum elongatum)', 'Epidendrum secundum')]"
-hybrid,Equisetum × meridionale,"[('Prasličkovka Južná', 'Equisetum × meridionale')]"
-hybrid,Equisetum × moorei,"[('Prasličkovka Mooreova', 'Equisetum × moorei')]"
 hybrid,Eryngium × tripartitum,"[('Eryngium tripartitum', 'Druh')]"
-hybrid,Eryngium × zabelii,"[('Eryngium zabelii', 'Druh')]"
-hybrid,Fagus × taurica,"[('Buk Taurský', 'Fagus × taurica')]"
-hybrid,Fragaria × ananassa,"[('Jahoda Ananásová', 'Fragaria × ananassa')]"
 hybrid,Gladiolus × byzantinus,"[('Gladiolus communis byzantinus (Gladiolus byzantinus)', 'Poddruh')]"
 hybrid,Gladiolus × lewisiae,"[('Gladiolus caryophyllaceus × tristis (Gladiolus lewisiae)', 'Kríženec')]"
-hybrid,Hosta × fortunei,"[('Hosta sieboldiana sieboldiana (Hosta fortunei)', 'Varieta')]"
 hybrid,Hosta × undulata,"[('Hosta undulata', 'Druh')]"
-hybrid,Iris × sambucina,"[('Kosatec Nemecký (Iris × sambucina)', 'Iris × germanica')]"
-hybrid,Lupinus× hybridus,"[('Lupinus hybridus', 'Druh'), ('Lupinus × hybridus', 'Kríženec')]"
 hybrid,Malus × dasyphylla,"[('Malus dasyphylla', 'Druh')]"
 hybrid,Malus × scheideckeri,"[('Pyrus pulcherrima scheideckeri (Malus scheideckeri)', 'Poddruh')]"
 hybrid,Mandevilla × amabilis,"[('Mandevilla amabilis', 'Druh')]"
-hybrid,Pelargonium × hybridum,"[('Muškát Záhradný', 'Pelargonium × hybridum')]"
 hybrid,Philadelphus × falconeri,"[('Philadelphus falconeri', 'Druh')]"
-hybrid,Phlox × procumbens,"[('Phlox procumbens', 'Druh')]"
 hybrid,Pilosella × fuscoatra,"[('Pilosella fuscoatra', 'Druh')]"
 hybrid,Poa × nobilis,"[('Poa nobilis', 'Druh')]"
-hybrid,Populus × candicans,"[('Topoľ Balzamový (Populus candicans)', 'Populus balsamifera')]"
 hybrid,Prunus × blireana,"[('Prunus blireana (Prunus × blireana)', 'Druh')]"
-hybrid,Prunus × fruticans,"[('Slivka Domáca Guľatoplodá × Trnka Obyčajná', 'Prunus × fruticans')]"
-hybrid,Reynoutria × bohemica,"[('Pohánkovec Český', 'Reynoutria × bohemica')]"
 hybrid,Robinia × margarettae,"[('Robinia × margaretta (Robinia margarettae)', 'Kríženec')]"
+
 hybrid,Salix × blanda,"[('Vŕba Previsnutá (Salix × blanda)', 'Salix × pendulina')]"
 hybrid,Sorbus × ambigua,"[('Majovskya ambigua (Sorbus ambigua)', 'Druh')]"
 hybrid,Sorbus × decipiens,"[('Karpatiosorbus hybrida (Sorbus decipiens)', 'Druh')]"
@@ -101,8 +114,10 @@ hybrid,Symphoricarpos × doorenbosii,"[('Symphoricarpos doorenbosii', 'Druh')]"
 hybrid,Syringa × hyacinthiflora,"[('Syringa hyacinthiflora', 'Druh')]"
 hybrid,Tradescantia × andersoniana,"[('Tradescantia virginiana (Tradescantia × andersoniana)', 'Dokončiť')]"
 hybrid,Tulipa × gesneriana,"[('Tulipán Gesnerov', 'Tulipa gesneriana')]"
+
 section,Taraxacum sect. Erythrosperma,"[('Erythrosperma (Taraxacum sect erythrosperma)', 'Sekcia')]"
 section,Taraxacum sect. Hamata,"[('Hamata (Taraxacum sect hamata)', 'Sekcia')]"
+
 species,Abies borisii-regis,"[('Abies × borisii-regis', 'Kríženec')]"
 species,Abies fabri,"[('Abies delavayi fabri (Abies fabri)', 'Varieta')]"
 species,Abies georgei,"[('Abies forrestii georgei (Abies georgei)', 'Varieta')]"
@@ -225,7 +240,6 @@ subspecies,Ceratophyllum demersum apiculatum,"[('Rožkatec Ponorený Hrboľkatý
 subspecies,Ceratophyllum demersum demersum,"[('Rožkatec Ponorený Pravý', 'Ceratophyllum demersum demersum')]"
 subspecies,Ceratophyllum demersum platyacanthum,"[('Rožkatec Ponorený Plochoostňový', 'Ceratophyllum demersum platyacanthum')]"
 subspecies,Chenopodium berlandieri zschackei,"[('Chenopodium berlandieri zschackei', 'Varieta')]"
-subspecies,Cichorium intybus foliosum,"[('Čakanka Obyčajná Pravá (Cichorium intybus foliosum)', 'Cichorium intybus intybus')]"
 subspecies,Echinocereus longisetus delaetii,"[('Echinocereus delaetii (Echinocereus longisetus delaetii)', 'Druh')]"
 subspecies,Erodium cicutarium cicutarium,"[('Bocianik Rozpukovitý (Erodium cicutarium cicutarium)', 'Erodium cicutarium')]"
 subspecies,Eucalyptus delegatensis tasmaniensis,"[('Eucalyptus tasmaniensis (Eucalyptus delegatensis tasmaniensis)', 'Druh')]"
