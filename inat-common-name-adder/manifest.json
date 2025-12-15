@@ -18,7 +18,12 @@
     },
     {
       "matches": ["https://www.inaturalist.org/taxa/*"],
-      "js": ["autoclose_tab_after_adding_common_name.js"],
+      "js": ["autoclose_tab_after_adding_common_name.js", "auto_press_edit_name.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://www.inaturalist.org/taxon_names/*/edit"],
+      "js": ["autofill_editing_common_name_form.js"],
       "run_at": "document_end"
     }
   ],
