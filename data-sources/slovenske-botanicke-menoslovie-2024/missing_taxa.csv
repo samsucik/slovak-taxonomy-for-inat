@@ -15,7 +15,6 @@ genus,Arachnioides
 genus,Bellidiastrum
 genus,Bergera
 genus,Boldoa
-genus,Bracteantha
 genus,Brunnicha
 genus,Buchozia
 genus,Codonorchis
@@ -102,8 +101,8 @@ group,Zea mays mays Indurata
 group,Zea mays mays Microsperma
 group,Zea mays mays Saccharata
 group,Zea mays mays Tunicata
-hybrid,× Amelosorbus
-hybrid,× Amelosorbus jackii
+hybrid,Amelosorbus
+hybrid,Amelosorbus jackii
 hybrid,Abies × insignis
 hybrid,Abies × vilmorinii
 hybrid,Achillea × kellereri
@@ -184,7 +183,6 @@ hybrid,Philadelphus × purpureomaculatus
 hybrid,Pinus × celakovskyorum
 hybrid,Primula × kewensis
 hybrid,Rhamnus × gayeri
-hybrid,Rheum × cultorum
 hybrid,Rhizophora × harrissonii
 hybrid,Rhododendron × gandavense
 hybrid,Rhododendron × praecox
@@ -241,7 +239,6 @@ section,Taraxacum sect. Scariosa
 section,Taraxacum sect. Taraxacum
 species,Abies gamblei
 species,Abrahamia sericea
-species,Acacia numerosa
 species,Acanthocalycium leucanthum
 species,Acer orientale
 species,Acer trautvetteri
@@ -276,7 +273,7 @@ species,Alchemilla loxotropa
 species,Alchemilla pungentiflora
 species,Alchemilla strigulosa
 species,Alexa imperatricis
-species,Allium cepa sk. Aggregatum
+species,Allium cepa Aggregatum
 species,Allium xanthicum
 species,Allium zahariadi
 species,Allophyllus amazonicus
@@ -452,7 +449,6 @@ species,Coluria omeiensis
 species,Colymbada adpressa
 species,Colymbada badensis
 species,Colymbada grinensis
-species,Colymbada sadleriana
 species,Colymbada spinulosa
 species,Commelina singularis
 species,Commicarpus adenensis
@@ -463,7 +459,6 @@ species,Copaifera bracteata
 species,Copaifera copaibo
 species,Copaifera guyanensis
 species,Coriaria napalensis
-species,Cornus coreana
 species,Coryanthes maculata
 species,Corymbia calophylla
 species,Cota halophila
@@ -546,7 +541,6 @@ species,Espeletia weddelii
 species,Euodia tietaensis
 species,Euphorbia fimbriata
 species,Euphorbia ledienii
-species,Euphorbia ornithopus
 species,Euphrasia coerulea
 species,Euphrasia exaristata
 species,Euphrasia stipitata
@@ -598,7 +592,6 @@ species,Habenaria unellezii
 species,Hanceola yuanyangensis
 species,Hanguana malyana
 species,Haworthiopsis tesselata
-species,Hecatostemon completus
 species,Helenium bigelowii
 species,Heliamphora ciliata
 species,Helianthemum italicum
@@ -659,14 +652,12 @@ species,Hylodendron gabunense
 species,Hylotelephium scherfelii
 species,Hymenoxis anthemoides
 species,Hypericum androsaeumum
-species,Hypocyrta barbata
 species,Hypodaphnis zenkeri
 species,Indocalamus chebalingensis
 species,Inga capitata
 species,Iodes sequinii
 species,Iris bakeriana
 species,Iris pumila
-species,Iris xiphiodes
 species,Isatis maeotica
 species,Ixeris hopingtunnelensis
 species,Jancaea heldreichii
@@ -759,7 +750,6 @@ species,Morus nigra  'Trnaviensis'
 species,Mostuea surinamensis
 species,Motandra poecilophylla
 species,Munnozia chimboracensis
-species,Musa rosacea
 species,Muscari transsylvanicum
 species,Mussaenda philippinensis
 species,Myosotis brevisetacea
@@ -966,7 +956,6 @@ species,Rubus alterniflorus
 species,Rubus arduenennsis
 species,Rubus austroslovacus
 species,Rubus caflischii
-species,Rubus conduplicatus
 species,Rubus elongatispinosus
 species,Rubus frisicus
 species,Rubus glivicensis
@@ -1346,8 +1335,6 @@ subspecies,Draba lasiocarpa lasiocarpa
 subspecies,Echinopsis aurea leucomalla
 subspecies,Epipactis atrorubens atrorubens
 subspecies,Erysimum cheiranthoides cheiranthoides
-subspecies,Erysimum odoratum buekkense
-subspecies,Erysimum odoratum buekkense
 subspecies,Euphorbia dulcis dulcis
 subspecies,Euphorbia esula riparia
 subspecies,Euphorbia seguieriana minor
@@ -1547,7 +1534,6 @@ subspecies,Ribes uva-crispa grossularia
 subspecies,Ribes uva-crispa reclinatum
 subspecies,Rosa canina canina
 subspecies,Rosa canina corymbifera
-subspecies,Rosa dumalis subcanina
 subspecies,Rosa dumalis subcollina
 subspecies,Rubus nessensis nessensis
 subspecies,Rumex aquaticus aquaticus

@@ -5,6 +5,8 @@ group,Citrullus lanatus Citroides,"[('Citrullus amarus (Citrullus lanatus citroi
 group,Triticum aestivum Compactum,"[('Triticum compactum (Triticum aestivum compactum)', 'Druh')]",je trochu zvlastne aby sme pre druh pouzili meno skupiny kultivarov...
 hybrid,Citrus × sinensis,"[('Citrónovník Horký (Citrus × sinensis)', 'Citrus × aurantium')]",v iNat zluceny s Citrus ×aurantium s ktorym podla SBM zdiela tu istu hybridnu formulu...
 hybrid,Iris × sambucina,"[('Kosatec Nemecký (Iris × sambucina)', 'Iris × germanica')]",v iNat zluceny s Iris × germanica a uvadza sa ta ista hybridna formula ako v SBM pre Iris × sambucina...
+hybrid,Salix × blanda,"[('Vŕba Previsnutá (Salix × blanda)', 'Salix × pendulina')]",tento iNat taxon ma uvedene ako byvale vedecke meno aj Salix × blanda ale podla POWO by Salix × blanda mala zodpovedat Salix × pendulina nothof. pendulina co je iny iNat taxon (https://www.inaturalist.org/taxa/1055551-Salix---pendulina-pendulina)
+species,Epipactis leutei,"[('Epipactis helleborine leutei (Epipactis leutei)', 'Poddruh')]",POWO odkazuje na Epipactis helleborine subsp. helleborine ale iNat ukazuje na Epipactis helleborine ssp. leutei
 
 neexistujuci taxon kvoli zluceniu prip. neoddeleniu od rodicovskeho taxonu
 genus,Parakeelya,"[('Calandrinia balonensis (Parakeelya)', 'Druh'), ('Calandrinia polyandra (Parakeelya)', 'Druh')]",v iNat je zjavne rod Parakeelya zluceny do rodu Calandrinia ktory v SBM existuje samostatne
@@ -20,11 +22,13 @@ group,Raphanus sativus Sativus,"[('Raphanus raphanistrum sativus (Raphanus sativ
 hybrid,Abutilon × hybridum,"[('Podslnečník (Abutilon × Hybridum)', 'Rod Abutilon')]",v iNat je zluceny s Abutilon
 hybrid,Epidendrum × elongatum,"[('Epidendrum Jednostranné (Epidendrum elongatum)', 'Epidendrum secundum')]",v iNat zluceny s Epidendrum secundum (jeden z rodicov)
 hybrid,Populus × candicans,"[('Topoľ Balzamový (Populus candicans)', 'Populus balsamifera')]",ako aj SBM uvadza je to podla POWO synonymum pre Populus balsamifera
+species,Allium coloratum,"[('Allium carinatum pulchellum (Allium coloratum)', 'Varieta,Allium schoenoprasum schoenoprasum (Allium coloratum)', 'Varieta')]",ak aj SBM uvadza je to synonymum pre A. cirrhosum
 
 neexistujuci taxon
 group,Cichorium intybus Foliosum,"[('Čakanka Obyčajná Pravá (Cichorium intybus foliosum)', 'Cichorium intybus intybus')]",existuje iba poddruh ktory je ale v SBM oddeleny od skupiny kultivarov
 hybrid,Phlox × procumbens,"[('Phlox procumbens', 'Druh')]",podla POWO je Phlox procumbens odlisny od Phlox × procumbens
-
+species,Callitris robusta,"[('Kalitria (Callitris robusta)', 'Rod Callitris')]",POWO pozna iba meno od inych autorov ale GBIF pozna presne od tychto (https://www.gbif.org/species/8023971) a tvari sa ze je to akceptovane. v iNat to nie je.
+species,Euphorbia angularis,"[('Euphorbia cooperi cooperi (Euphorbia angularis)', 'Varieta')]",nic nenasvedcuje tomu ze by E. cooperi cooperi bol ten isty taxon (POWO ani GBIF)
 
 prijmeme ze je to (pod)sekcia a prisposobime SK meno?
 genus,Anagallis,"[('Anagallis', 'Sekcia')]"
@@ -49,6 +53,8 @@ hybrid,Fagus × taurica,"[('Buk Taurský', 'Fagus × taurica')]"
 hybrid,Fragaria × ananassa,"[('Jahoda Ananásová', 'Fragaria × ananassa')]"
 hybrid,Pelargonium × hybridum,"[('Muškát Záhradný', 'Pelargonium × hybridum')]"
 hybrid,Reynoutria × bohemica,"[('Pohánkovec Český', 'Reynoutria × bohemica')]"
+hybrid,Tulipa × gesneriana,"[('Tulipán Gesnerov', 'Tulipa gesneriana')]"
+
 
 OK matches
 form,Betula pendula carelica,"[('Betula pendula carelica', 'Poddruh')]"
@@ -100,8 +106,6 @@ hybrid,Pilosella × fuscoatra,"[('Pilosella fuscoatra', 'Druh')]"
 hybrid,Poa × nobilis,"[('Poa nobilis', 'Druh')]"
 hybrid,Prunus × blireana,"[('Prunus blireana (Prunus × blireana)', 'Druh')]"
 hybrid,Robinia × margarettae,"[('Robinia × margaretta (Robinia margarettae)', 'Kríženec')]"
-
-hybrid,Salix × blanda,"[('Vŕba Previsnutá (Salix × blanda)', 'Salix × pendulina')]"
 hybrid,Sorbus × ambigua,"[('Majovskya ambigua (Sorbus ambigua)', 'Druh')]"
 hybrid,Sorbus × decipiens,"[('Karpatiosorbus hybrida (Sorbus decipiens)', 'Druh')]"
 hybrid,Sorghum × drummondii,"[('Sorghum bicolor × drummondii (Sorghum × drummondii)', 'Poddruh')]"
@@ -113,23 +117,18 @@ hybrid,Staphylea × elegans,"[('Staphylea elegans', 'Druh')]"
 hybrid,Symphoricarpos × doorenbosii,"[('Symphoricarpos doorenbosii', 'Druh')]"
 hybrid,Syringa × hyacinthiflora,"[('Syringa hyacinthiflora', 'Druh')]"
 hybrid,Tradescantia × andersoniana,"[('Tradescantia virginiana (Tradescantia × andersoniana)', 'Dokončiť')]"
-hybrid,Tulipa × gesneriana,"[('Tulipán Gesnerov', 'Tulipa gesneriana')]"
-
 section,Taraxacum sect. Erythrosperma,"[('Erythrosperma (Taraxacum sect erythrosperma)', 'Sekcia')]"
 section,Taraxacum sect. Hamata,"[('Hamata (Taraxacum sect hamata)', 'Sekcia')]"
-
 species,Abies borisii-regis,"[('Abies × borisii-regis', 'Kríženec')]"
 species,Abies fabri,"[('Abies delavayi fabri (Abies fabri)', 'Varieta')]"
 species,Abies georgei,"[('Abies forrestii georgei (Abies georgei)', 'Varieta')]"
 species,Aconitum corsicum,"[('Aconitum napellus corsicum (Aconitum corsicum)', 'Poddruh')]"
-species,Allium coloratum,"[('Allium carinatum pulchellum (Allium coloratum)', 'Varieta,Allium schoenoprasum schoenoprasum (Allium coloratum)', 'Varieta')]"
 species,Amaranthus bouchonii,"[('Amaranthus hybridus hybridus (Amaranthus bouchonii)', 'Poddruh')]"
 species,Amsinckia micrantha,"[('Amsinckia menziesii menziesii (Amsinckia micrantha)', 'Varieta')]"
 species,Atriplex calotheca,"[('Atriplex prostrata calotheca (Atriplex calotheca)', 'Poddruh')]"
 species,Beta maritima,"[('Beta vulgaris maritima (Beta maritima)', 'Poddruh')]"
 species,Betula albosinensis,"[('Betula utilis albosinensis (Betula albosinensis)', 'Poddruh')]"
 species,Bryonia dioica,"[('Bryonia cretica dioica (Bryonia dioica)', 'Poddruh')]"
-species,Callitris robusta,"[('Kalitria (Callitris robusta)', 'Rod Callitris')]"
 species,Calophyllum antillanum,"[('Calophyllum brasiliense antillanum (Calophyllum antillanum)', 'Varieta')]"
 species,Calystegia pulchra,"[('Calystegia × pulchra (Calystegia pulchra)', 'Kríženec')]"
 species,Campanula gelida,"[('Campanula bohemica gelida (Campanula gelida)', 'Poddruh')]"
@@ -144,11 +143,9 @@ species,Eleusine africana,"[('Eleusine coracana africana (Eleusine africana)', '
 species,Empetrum hermaphroditum,"[('Empetrum nigrum hermaphroditum (Empetrum hermaphroditum)', 'Poddruh')]"
 species,Epipactis distans,"[('Epipactis helleborine orbicularis (Epipactis distans)', 'Poddruh')]"
 species,Epipactis futakii,"[('Epipactis leptochila leptochila (Epipactis futakii)', 'Poddruh')]"
-species,Epipactis leutei,"[('Epipactis helleborine leutei (Epipactis leutei)', 'Poddruh')]"
 species,Epipactis voethii,"[('Epipactis helleborine helleborine (Epipactis voethii)', 'Poddruh')]"
 species,Erigeron muralis,"[('Erigeron acris serotinus (Erigeron muralis)', 'Poddruh')]"
 species,Erysimum cheiri,"[('Erysimum × cheiri (Erysimum cheiri)', 'Kríženec')]"
-species,Euphorbia angularis,"[('Euphorbia cooperi cooperi (Euphorbia angularis)', 'Varieta')]"
 species,Exochorda giraldii,"[('Exochorda racemosa giraldii (Exochorda giraldii)', 'Poddruh')]"
 species,Gagea pomeranica,"[('Gagea × pomeranica', 'Kríženec')]"
 species,Galium wirtgenii,"[('Galium verum wirtgenii (Galium wirtgenii)', 'Poddruh')]"
@@ -166,6 +163,7 @@ species,Hordeum geniculatum,"[('Hordeum marinum gussoneanum (Hordeum geniculatum
 species,Hymenopus  macrophyllus,"[('Hymenopus macrophyllus', 'Druh')]"
 species,Hypericum dubium,"[('Hypericum maculatum obtusiusculum (Hypericum dubium)', 'Poddruh')]"
 species,Lithops bella,"[('Lithops karasmontana bella (Lithops bella)', 'Poddruh')]"
+
 species,Lonicera nitida,"[('Lonicera ligustrina yunnanensis (Lonicera nitida)', 'Varieta')]"
 species,Lonicera pileata,"[('Lonicera ligustrina pileata (Lonicera pileata)', 'Varieta')]"
 species,Lotus alpicola,"[('Lotus corniculatus corniculatus (Lotus alpicola)', 'Poddruh')]"
@@ -206,6 +204,7 @@ species,Utricularia ochroleuca,"[('Utricularia × ochroleuca (Utricularia ochrol
 species,Vaccinium gaultherioides,"[('Vaccinium uliginosum microphyllum (Vaccinium gaultherioides)', 'Poddruh')]"
 species,Veronica jacquinii,"[('Veronica austriaca jacquinii (Veronica jacquinii)', 'Poddruh')]"
 species,Veronica vindobonensis,"[('Veronica chamaedrys vindobonensis (Veronica vindobonensis)', 'Varieta')]"
+
 species,Viburnum trilobum,"[('Viburnum opulus americanum (Viburnum trilobum)', 'Varieta')]"
 subspecies_hybrid,Viola × contempta bohemica,"[('Viola × contempta bohemica', 'Poddruh')]"
 subspecies,Acer tataricum ginnala,"[('Acer ginnala (Acer tataricum ginnala)', 'Druh')]"
@@ -331,6 +330,7 @@ subspecies,Vicia villosa varia,"[('Vika Huňatá Olysalá', 'Vicia villosa varia
 subspecies,Vigna unguiculata cylindrica,"[('Vigna Nechtíkatá Pravá (Vigna unguiculata cylindrica)', 'Vigna unguiculata unguiculata')]"
 subspecies,Vitis vinifera sylvestris,"[('Vinič Lesný', 'Vitis vinifera sylvestris')]"
 subspecies,Zea mays mexicana,"[('Zea mexicana (Zea mays mexicana)', 'Druh')]"
+
 variety,Acer campestre campestre,"[('Acer campestre campestre', 'Poddruh')]"
 variety,Acer campestre leiocarpum,"[('Acer campestre leiocarpum', 'Poddruh')]"
 variety,Aesculus chinensis wilsonii,"[('Pagaštan Čínsky (Aesculus chinensis wilsonii)', 'Aesculus chinensis')]"
