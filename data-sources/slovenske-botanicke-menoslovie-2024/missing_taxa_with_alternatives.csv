@@ -29,6 +29,9 @@ group,Cichorium intybus Foliosum,"[('Čakanka Obyčajná Pravá (Cichorium intyb
 hybrid,Phlox × procumbens,"[('Phlox procumbens', 'Druh')]",podla POWO je Phlox procumbens odlisny od Phlox × procumbens
 species,Callitris robusta,"[('Kalitria (Callitris robusta)', 'Rod Callitris')]",POWO pozna iba meno od inych autorov ale GBIF pozna presne od tychto (https://www.gbif.org/species/8023971) a tvari sa ze je to akceptovane. v iNat to nie je.
 species,Euphorbia angularis,"[('Euphorbia cooperi cooperi (Euphorbia angularis)', 'Varieta')]",nic nenasvedcuje tomu ze by E. cooperi cooperi bol ten isty taxon (POWO ani GBIF)
+species,Hieracium sudetotubulosum,,skrz syn. H. tubulosum odkazuje na Schlagintweitia intybacea ale to je podla POWO uplne iny taxon napriek tomu ze ma priradene korespondujuce ceske meno
+species,Astragalus atropilosus,,cez synonymum A. venosus odkazuje na Astragalus aucheri ale to je podla POWO uplne iny taxon
+species,Euphorbia fimbriata,,
 
 prijmeme ze je to (pod)sekcia a prisposobime SK meno?
 genus,Anagallis,"[('Anagallis', 'Sekcia')]"

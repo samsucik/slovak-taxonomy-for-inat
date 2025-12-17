@@ -1,3 +1,4 @@
+import ast
 import pandas as pd
 from tqdm import tqdm
 
@@ -22,5 +23,7 @@ def select_sbm_taxa(all_taxa, sci_names_to_select):
 
 
 selected_sbm_taxa = select_sbm_taxa(all_sbm_taxa, taxa_to_select)
+
+selected_sbm_taxa["synonyms"] = selected_sbm_taxa["scientific_synonyms_sbm"].apply(ast.literal_eval)
 
 selected_sbm_taxa.to_json(f"taxa_selected_by_{select_by_file_name}.json", orient="records")

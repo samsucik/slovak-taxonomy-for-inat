@@ -13,38 +13,30 @@ genus,Allophyllus
 genus,Aloe
 genus,Arachnioides
 genus,Bellidiastrum
-genus,Bergera
 genus,Boldoa
 genus,Brunnicha
 genus,Buchozia
-genus,Codonorchis
 genus,Colymbada
 genus,Dinoseris
 genus,Diplarrhena
 genus,Eriolaryx
 genus,Escallonia
-genus,Fourraea
 genus,Grilicidia
 genus,Hilliella
 genus,Hippophaë
 genus,Horminium
-genus,Hudsonia
 genus,Ixioliron
 genus,Jancaea
 genus,Kielmayera
-genus,Kniphofia
 genus,Kuloa
 genus,Laccospadis
 genus,Lueddemania
-genus,Melia
 genus,Mora
 genus,Phyllotaenium
 genus,Pyrocydonia
-genus,Regnellidium
 genus,Rhaphidophyllum
 genus,Sedobassia
 genus,Smithia
-genus,Tetraena
 genus,Thouinia
 genushybrid,Angulocaste
 genushybrid,Cephalopactis
@@ -107,7 +99,6 @@ hybrid,Abies × insignis
 hybrid,Abies × vilmorinii
 hybrid,Achillea × kellereri
 hybrid,Achimenes × hybrida
-hybrid,Alocasia × mortfontanensis
 hybrid,Amaranthus × soproniensis
 hybrid,Anemone × lesseri
 hybrid,Anthurium × ferrierense
@@ -628,7 +619,6 @@ species,Hieracium serratum
 species,Hieracium slovacum
 species,Hieracium speciosum
 species,Hieracium subsinuatum
-species,Hieracium sudetotubulosum
 species,Hieracium tatrae
 species,Hieracium trebevicianum
 species,Hieracium vagneri

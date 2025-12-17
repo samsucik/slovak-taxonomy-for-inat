@@ -1,11 +1,13 @@
 # TO-DO list
 
 - see where we added more than one name to a taxon: run `detect_multiple_added_names_per_taxon.py`
+- for slovak names belonging to more than 1 taxon: wait for resolution from DRL
 - groups: see if they exist under a different rank (form/variety), otherwise move on
 - search by synonyms: first from the DB then from GBIF/POWO
 - where a taxon is missing and could be requested to be created, send a list to DRL first (as some taxa are questionable in the first place)
 - contact others based on the results of running `filter_existing_names.py` and then `attribute_existing_names.py` (keep track of resolved cases in `existing_names_covered.csv`)
 - names of orders! (MFS)
+- check all the names assigned with the help of synonyms (`sbm_to_inat_sci_name_mapping.csv`) and auto-detect those that are based on heterotypic (taxonomical) rather than homotypic (nomenclatural) synonyms. POWO should serve as a guide here.
 
 ## Handling tough-to-find taxa
 
@@ -39,3 +41,10 @@ Neolemonniera ogouensis (neolemoniéra ogouéska → n. ogoouéska)
 Pseudopanax chatmanicus (paženšen chatamský → p. chathamský)
 Ranunculus niepolomicensis (iskerník niepolomický → i. niepołomický)
 Portulaca oleracea subsp. zaffranii – portulac(k)a zeleninová Zaffranova
+
+
+# Preklepy vo vedeckych menach
+- Mesophaerum pectinatum (Mesosphaerum pectinatum)
+- Haworthiopsis tesselata (Haworthiopsis tessellata)
+- Eustoma russelianum (Eustoma russellianum)
+- Cochemiea mazatlensis (Cochemiea mazatlanensis)
