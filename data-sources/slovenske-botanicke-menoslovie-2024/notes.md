@@ -48,3 +48,11 @@ Portulaca oleracea subsp. zaffranii – portulac(k)a zeleninová Zaffranova
 - Haworthiopsis tesselata (Haworthiopsis tessellata)
 - Eustoma russelianum (Eustoma russellianum)
 - Cochemiea mazatlensis (Cochemiea mazatlanensis)
+- Myrceugenia  exsucca (Myrceugenia exsucca)
+- Pseudobombax  septenatum (Pseudobombax septenatum)
+- Hymenopus  macrophyllus (Hymenopus macrophyllus)
+- Myrceugenia  exsucca (Myrceugenia exsucca)
+- Pseudobombax  septenatum (Pseudobombax septenatum)
+
+# Preklepy v slovenskych menach
+- žltuškovaté (Marek Hrusovsky)
