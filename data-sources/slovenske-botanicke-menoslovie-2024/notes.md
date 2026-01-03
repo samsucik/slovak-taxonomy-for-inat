@@ -56,3 +56,6 @@ Portulaca oleracea subsp. zaffranii – portulac(k)a zeleninová Zaffranova
 
 # Preklepy v slovenskych menach
 - žltuškovaté (Marek Hrusovsky)
+
+# Cudne pripady pre Dominika (bude musiet opravit)
+- pyknokóma veľkolistá (Pycnocoma macrophylla) vs pyknokoma veľkolistá (Argomuellera macrophylla) – to asi chce byt ten isty druh, nie?
