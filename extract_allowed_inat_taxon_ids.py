@@ -8,7 +8,8 @@ filter_functions = {
     or taxon["class"] == "Insecta",
     "checklist-of-lepidoptera-recorded-in-Slovakia-2022": lambda taxon: taxon["order"]
     == "Lepidoptera",
-    "slovenske-botanicke-menoslovie-2024": lambda taxon: taxon["phylum"] == "Tracheophyta"
+    "slovenske-botanicke-menoslovie-2024": lambda taxon: taxon["phylum"] == "Tracheophyta",
+    "slovenske-mena-vtakov-sveta-2020": lambda taxon: taxon["class"] == "Aves"
 }
 
 
