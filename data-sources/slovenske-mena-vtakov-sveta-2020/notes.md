@@ -1,0 +1,44 @@
+# taxa not handled (need to be revisited)
+- Corythaixoides personatus (SMVS name)
+- Odontophorus speciosus
+- Coccycua pumila
+- Numenius borealis
+- Actitis
+- Psophia crepitans
+- Otus grucheti
+- Ceyx pallidus (SMVS name)
+- Campethera bennettii
+- Geocolaptes
+- Grallaria urraoensis
+- Scytalopus speluncae
+- Sericornis nouhuysi
+- Arremonidae (SMVS)
+
+# non-existing species?
+- Ceyx pallidus (in iNat there's Ceyx meeki but GBIF says that pallidus is a synonym for meeki ssp. pallidus)
+- Hylophilus viridiflavus
+- Hylophilus griseiventris
+- Vireo notius
+- Lamproliidae
+- Cyanocorax luxuosus
+- Rhamphocharis piperata
+- Parus minor
+- Certhilauda benguelensis
+- Calendulauda alopex
+- Cecropis striolata
+- Calamornis
+- Zosterops chrysolaemus
+- Zosterops ugiensis
+- Aegithalos bonvaloti
+- Pheugopedius paucimaculatus
+- Aethopyga latouchii
+- piranga zubkozoba
+- Piranga hepatica
+- Sphenopsis piurae
+- Spindalidae
+- Nesospingidae
+- Passerella schistacea
+- Passerella megarhyncha
+- Passerella unalaschcensis
+- Cyanophonia
+- Anthus lutescens
