@@ -1,5 +1,7 @@
 all_inat_taxa.csv
+all_inat_taxa*.csv
 allowed_inat_taxon_ids.csv
 .DS_Store
 __pycache__
 inaturalist-taxonomy.dwca
+VernacularNames-*.csv
